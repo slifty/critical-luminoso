@@ -1,0 +1,7 @@
+This is the Python companion of the Truth Goggles application
+It interfaces with Luminoso and will attempt to predict related claims for an unknown body of text.
+
+Install instructions will be added at a later date...
+
+DISCLAIMER:
+  I don't know Python.
