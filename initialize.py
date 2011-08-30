@@ -1,5 +1,4 @@
-import os
+import config
 from luminoso.study import StudyDirectory;
 
-claim_dir = "claims/"
-StudyDirectory.make_new(claim_dir)
+StudyDirectory.make_new(config.study_location)
