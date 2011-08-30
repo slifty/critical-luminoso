@@ -1,5 +1,6 @@
 import json
 import urllib
+import os
 import config
 
 # Build up a Claim / Corpus Array
@@ -28,6 +29,16 @@ for claim in claims_api_response["claims"]:
 	snippet_api_response = json.load(urllib.urlopen(config.snippets_api + "?claim_id=" + str(claim["id"])))
 	for snippet in snippet_api_response["snippets"]:
 		luminoso_claims[str(claim["id"])].append(snippet["context"])
+		
+		
+# Delete the old corpus
+folder = config.study_documents_location
+for the_file in os.listdir(folder):
+	file_path = os.path.join(folder, the_file)
+	try:
+		os.unlink(file_path)
+	except Exception, e:
+		print e
 		
 		
 # Write the corpus into the Luminoso Study -- one per claim ID
