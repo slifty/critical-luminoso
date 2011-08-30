@@ -2,7 +2,7 @@ import json
 import urllib
 
 # Update Luminoso study to contain the latest claims and their associated text
-study_location = "claims/"
+study_documents_location = "claims/Documents"
 claims_api = "http://127.0.0.1/critical/api/claims/"
 corpus_items_api = "http://127.0.0.1/critical/api/corpus_items/"
 snippets_api = "http://127.0.0.1/critical/api/snippets/"
