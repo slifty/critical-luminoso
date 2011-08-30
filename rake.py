@@ -38,7 +38,6 @@ for claim in claims_api_response["claims"]:
 		
 # Write the study files -- one per claim ID
 for claim_id in luminoso_claims:
-	print(claim_id)
 	corpus_items = luminoso_claims[claim_id]
 	file_name = str(claim_id) + ".txt"
 	file_path = study_location + file_name
