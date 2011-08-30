@@ -1,3 +1,4 @@
+import os
 from luminoso.study import StudyDirectory;
 
 claim_dir = "claims"
